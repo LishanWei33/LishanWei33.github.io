@@ -3,45 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lishan Wei | Personal Website</title>
+  <title>Alisa Wei | Personal Website</title>
   <meta
     name="description"
-    content="Lishan Wei personal website template with a clean resume framework for experience, projects, and contact information."
+    content="Alisa Wei personal website featuring brand strategy, content marketing, communication, selected projects, and portfolio highlights."
   >
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Lishan Wei">
+  <meta name="author" content="Alisa Wei">
   <link rel="canonical" href="https://lishanwei33.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lishan Wei | Personal Website">
+  <meta property="og:title" content="Alisa Wei | Personal Website">
   <meta
     property="og:description"
-    content="A polished personal website framework for resume highlights, selected work, and contact details."
+    content="A refined personal website for Alisa Wei featuring experience, projects, portfolio highlights, and contact information."
   >
   <meta property="og:url" content="https://lishanwei33.github.io/">
   <meta property="og:image" content="https://lishanwei33.github.io/assets/lishanwei.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lishan Wei | Personal Website">
+  <meta name="twitter:title" content="Alisa Wei | Personal Website">
   <meta
     name="twitter:description"
-    content="A polished personal website framework for resume highlights, selected work, and contact details."
+    content="A refined personal website for Alisa Wei featuring experience, projects, portfolio highlights, and contact information."
   >
   <meta name="twitter:image" content="https://lishanwei33.github.io/assets/lishanwei.png">
   <style>
     :root {
-      --bg: #f5f1ea;
-      --bg-soft: #fcfaf6;
-      --panel: rgba(255, 255, 255, 0.72);
-      --panel-strong: rgba(255, 255, 255, 0.9);
-      --ink: #0d1d38;
-      --muted: #5f6a7d;
-      --line: rgba(13, 29, 56, 0.11);
-      --navy: #0d2c6c;
-      --blue: #5d84ca;
-      --accent: #efe5d4;
-      --shadow: 0 28px 60px rgba(9, 29, 73, 0.08);
-      --radius-xl: 36px;
-      --radius-lg: 28px;
-      --radius-md: 20px;
+      --bg: #fcfaf5;
+      --panel: #ffffff;
+      --line: rgba(12, 42, 104, 0.11);
+      --ink: #10223f;
+      --muted: #65748a;
+      --navy: #0a2a6b;
+      --blue: #4b75c1;
+      --pill: #e8f0ff;
+      --footer: #0a2764;
+      --shadow: 0 24px 54px rgba(10, 42, 107, 0.07);
       --max-width: 1180px;
     }
 
@@ -55,12 +51,11 @@
 
     body {
       margin: 0;
-      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
       color: var(--ink);
+      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(255, 244, 226, 0.88), transparent 28%),
-        radial-gradient(circle at 100% 10%, rgba(216, 228, 255, 0.56), transparent 22%),
-        linear-gradient(180deg, #fcfaf7 0%, #f3efe8 100%);
+        radial-gradient(circle at top left, rgba(255, 242, 225, 0.65), transparent 28%),
+        linear-gradient(180deg, #fffdf9 0%, #fbf8f2 100%);
     }
 
     a {
@@ -68,8 +63,13 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     .wrap {
-      width: min(var(--max-width), calc(100% - 32px));
+      width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
     }
 
@@ -77,24 +77,24 @@
       position: sticky;
       top: 0;
       z-index: 30;
-      backdrop-filter: blur(18px);
-      background: rgba(252, 250, 247, 0.88);
-      border-bottom: 1px solid rgba(13, 29, 56, 0.08);
+      background: rgba(255, 252, 247, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(10, 42, 107, 0.08);
     }
 
     .site-header .wrap {
-      min-height: 86px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 20px;
     }
 
     .brand {
-      font-size: 1.95rem;
-      font-weight: 800;
-      letter-spacing: -0.06em;
       color: var(--navy);
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
     }
 
     .nav {
@@ -108,10 +108,10 @@
     .nav a {
       padding: 10px 12px;
       color: var(--muted);
-      font-size: 0.94rem;
-      font-weight: 700;
+      font-size: 0.84rem;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       transition: color 0.2s ease, transform 0.2s ease;
     }
 
@@ -123,328 +123,438 @@
     }
 
     .nav .cta {
-      min-height: 48px;
+      min-height: 46px;
       padding: 0 22px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      background: var(--footer);
       color: #fff;
-      background: linear-gradient(135deg, #13357d, #0d2c6c);
-      box-shadow: 0 16px 30px rgba(10, 38, 97, 0.18);
+      box-shadow: 0 12px 26px rgba(10, 39, 100, 0.12);
     }
 
     main {
-      padding: 28px 0 72px;
+      padding-bottom: 0;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-      gap: 48px;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
+      gap: 72px;
       align-items: center;
-      min-height: calc(100vh - 120px);
-      padding: 26px 0 18px;
+      min-height: calc(100vh - 90px);
+      padding: 70px 0 78px;
     }
 
     .hero-copy,
-    .hero-card,
+    .hero-photo,
     .section {
-      animation: fade-up 0.8s ease both;
+      animation: rise-in 0.8s ease both;
     }
 
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--blue);
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    h1 {
+    .hero h1 {
       margin: 0;
       color: var(--navy);
-      font-size: clamp(3.4rem, 8vw, 6.2rem);
-      line-height: 0.93;
-      letter-spacing: -0.08em;
+      font-size: clamp(4rem, 8.5vw, 7rem);
+      line-height: 0.9;
+      letter-spacing: -0.09em;
     }
 
-    h1 em {
-      display: inline-block;
-      color: var(--blue);
+    .hero h1 em {
       font-style: italic;
+      color: var(--blue);
       font-weight: 700;
     }
 
     .hero-copy p {
-      max-width: 640px;
-      margin: 24px 0 0;
+      max-width: 560px;
+      margin: 28px 0 0;
       color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.9;
+      font-size: 1.15rem;
+      line-height: 1.8;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
     .button,
-    .button-ghost {
-      min-height: 56px;
-      padding: 0 24px;
+    .button-light {
+      min-height: 54px;
+      padding: 0 22px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
       transition: transform 0.2s ease, background 0.2s ease;
     }
 
     .button {
+      background: var(--footer);
       color: #fff;
-      background: linear-gradient(135deg, #13357d, #0d2c6c);
+      box-shadow: 0 14px 28px rgba(10, 39, 100, 0.14);
     }
 
-    .button-ghost {
+    .button-light {
       color: var(--navy);
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid rgba(13, 29, 56, 0.12);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.75);
     }
 
     .button:hover,
-    .button-ghost:hover,
+    .button-light:hover,
     .button:focus-visible,
-    .button-ghost:focus-visible {
+    .button-light:focus-visible {
       transform: translateY(-2px);
       outline: none;
     }
 
-    .hero-card {
-      position: relative;
-      padding: 26px;
-      background: var(--panel);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 0.88 / 1;
+      object-fit: cover;
+      filter: grayscale(1);
+      background: #efebe4;
       box-shadow: var(--shadow);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 16px;
-      border: 1px solid rgba(13, 29, 56, 0.08);
-      pointer-events: none;
-    }
-
-    .photo-placeholder {
-      min-height: 560px;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(240, 236, 229, 0.78)),
-        linear-gradient(135deg, #f7f2ea, #ebe6dd);
-      color: var(--muted);
-      text-align: center;
-    }
-
-    .photo-placeholder strong {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--navy);
-      font-size: 1.55rem;
-      letter-spacing: -0.04em;
-    }
-
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 34px;
-      max-width: 760px;
-    }
-
-    .quick-card {
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.58);
-      border: 1px solid var(--line);
-    }
-
-    .quick-card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--navy);
-      font-size: 1.7rem;
-      letter-spacing: -0.05em;
-    }
-
-    .quick-card span {
-      color: var(--muted);
-      line-height: 1.7;
     }
 
     .section {
-      margin-top: 36px;
-      padding: 34px;
-      background: var(--panel);
-      border: 1px solid rgba(255, 255, 255, 0.72);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-xl);
-      backdrop-filter: blur(14px);
+      padding: 92px 0 0;
     }
 
-    .section-head {
-      display: grid;
-      grid-template-columns: 180px minmax(0, 1fr);
-      gap: 20px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 24px;
-    }
-
-    .section-label {
-      color: var(--blue);
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .section-head h2 {
-      margin: 0 0 10px;
+    .section-title {
       color: var(--navy);
-      font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      line-height: 1;
       letter-spacing: -0.06em;
+      margin: 0;
     }
 
-    .section-head p {
-      margin: 0;
+    .section-intro {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 780px;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 2px;
+      background: rgba(75, 117, 193, 0.32);
+      margin-top: 18px;
+    }
+
+    .section-heading-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-heading-left {
+      margin-bottom: 42px;
+    }
+
+    .trajectory {
+      position: relative;
+      display: grid;
+      gap: 46px;
+    }
+
+    .trajectory::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, rgba(75, 117, 193, 0.9), rgba(248, 120, 67, 0.7));
+    }
+
+    .trajectory-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .trajectory-item::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #4c76c2;
+      box-shadow: 0 0 0 6px rgba(76, 118, 194, 0.12);
+    }
+
+    .visual-card,
+    .content-card,
+    .project-card,
+    .portfolio-card,
+    .competency {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .visual-card {
+      min-height: 280px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 244, 237, 0.92));
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .mini-panel {
+      min-height: 108px;
+      padding: 14px;
+      background: rgba(238, 244, 255, 0.56);
+      border: 1px solid rgba(75, 117, 193, 0.16);
+      display: flex;
+      align-items: end;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+
+    .content-card {
+      padding: 12px 0;
+      box-shadow: none;
+      border: 0;
+      background: transparent;
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill);
+      color: var(--blue);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .content-card h3 {
+      margin: 18px 0 8px;
+      color: var(--navy);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      letter-spacing: -0.05em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-bottom: 16px;
+    }
+
+    .content-card p,
+    .content-card li,
+    .project-card p,
+    .portfolio-card p,
+    .contact-copy p {
       color: var(--muted);
       line-height: 1.85;
     }
 
-    .grid-3,
-    .grid-2 {
-      display: grid;
-      gap: 18px;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .panel {
-      padding: 24px;
-      border-radius: var(--radius-md);
-      background: var(--panel-strong);
-      border: 1px solid var(--line);
-    }
-
-    .panel h3 {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: 1.18rem;
-      letter-spacing: -0.04em;
-    }
-
-    .panel p,
-    .panel li {
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .panel ul {
-      list-style: none;
+    .content-card ul {
       margin: 0;
-      padding: 0;
+      padding-left: 20px;
       display: grid;
       gap: 10px;
     }
 
-    .timeline {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 200px minmax(0, 1fr);
-      gap: 22px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .timeline-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .timeline-meta {
-      color: var(--blue);
-      font-size: 0.93rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .timeline-content h3 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.25rem;
-      letter-spacing: -0.04em;
-    }
-
-    .timeline-content p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .tag-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0 0;
+    .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
     }
 
-    .tag-list li {
-      padding: 8px 12px;
+    .tags li {
+      padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(93, 132, 202, 0.1);
-      color: var(--navy);
-      font-size: 0.9rem;
+      background: var(--pill);
+      color: var(--blue);
+      font-size: 0.78rem;
       font-weight: 700;
     }
 
-    .placeholder {
-      color: var(--muted);
-      font-style: italic;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
     }
 
-    .footer {
-      padding: 30px 0 10px;
-      color: var(--muted);
+    .project-card {
+      padding: 28px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .icon-box {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 28px;
+      color: var(--blue);
+      background: rgba(75, 117, 193, 0.1);
+      font-weight: 800;
+    }
+
+    .project-card h3 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 1.4rem;
+      letter-spacing: -0.04em;
+    }
+
+    .project-card .tags {
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .competencies {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .competency {
+      min-height: 86px;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .competency-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
       font-size: 0.95rem;
-      text-align: center;
+      font-weight: 900;
+      background: rgba(75, 117, 193, 0.12);
     }
 
-    code {
-      padding: 2px 6px;
-      border-radius: 8px;
-      background: rgba(13, 29, 56, 0.06);
+    .portfolio-list {
+      display: grid;
+      gap: 26px;
     }
 
-    @keyframes fade-up {
+    .portfolio-card {
+      padding: 28px 0;
+      box-shadow: none;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      background: transparent;
+    }
+
+    .portfolio-card:first-child {
+      padding-top: 0;
+    }
+
+    .portfolio-kicker {
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      letter-spacing: -0.04em;
+    }
+
+    .contact-section {
+      margin-top: 96px;
+      background: var(--footer);
+      color: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 44px;
+      padding: 84px 0 92px;
+    }
+
+    .contact-copy h2 {
+      margin: 0 0 24px;
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .contact-copy p,
+    .contact-links a {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      padding-top: 24px;
+    }
+
+    .contact-links a {
+      font-size: 1.02rem;
+    }
+
+    .download {
+      margin-top: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      background: #fff;
+      color: var(--footer);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @keyframes rise-in {
       from {
         opacity: 0;
         transform: translateY(18px);
@@ -458,10 +568,10 @@
 
     @media (max-width: 980px) {
       .hero,
-      .section-head,
-      .grid-3,
-      .grid-2,
-      .timeline-item {
+      .trajectory-item,
+      .projects,
+      .competencies,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -470,8 +580,13 @@
         gap: 32px;
       }
 
-      .quick-grid {
-        grid-template-columns: 1fr;
+      .trajectory::before,
+      .trajectory-item::before {
+        display: none;
+      }
+
+      .trajectory-item {
+        gap: 18px;
       }
     }
 
@@ -481,31 +596,31 @@
       }
 
       .site-header .wrap {
-        padding: 12px 0;
+        padding: 10px 0;
       }
 
       .brand {
-        font-size: 1.65rem;
+        font-size: 1.6rem;
       }
 
-      .nav {
-        justify-content: flex-start;
+      .hero {
+        padding: 42px 0 44px;
       }
 
-      h1 {
-        font-size: clamp(2.8rem, 17vw, 4.5rem);
+      .hero h1 {
+        font-size: clamp(3.2rem, 17vw, 4.9rem);
       }
 
       .hero-copy p {
         font-size: 1rem;
       }
 
-      .photo-placeholder {
-        min-height: 380px;
+      .section {
+        padding-top: 68px;
       }
 
-      .section {
-        padding: 22px;
+      .visual-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -516,9 +631,11 @@
       "dateModified": "2026-04-15",
       "mainEntity": {
         "@type": "Person",
-        "name": "Lishan Wei",
+        "name": "Alisa Wei",
+        "alternateName": "魏丽姗",
         "url": "https://lishanwei33.github.io/",
-        "description": "Personal website and resume template for Lishan Wei."
+        "image": "https://lishanwei33.github.io/assets/lishanwei.png",
+        "description": "Brand strategy, content marketing, and communication portfolio for Alisa Wei."
       }
     }
   </script>
@@ -526,11 +643,11 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="#top">LishanWei</a>
+      <a class="brand" href="#top">AlisaWei</a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
         <a class="cta" href="#contact">Let's Talk</a>
       </nav>
@@ -539,114 +656,117 @@
 
   <main id="top">
     <div class="wrap">
-      <section class="hero" aria-label="Homepage hero">
+      <section class="hero" aria-label="Hero">
         <div class="hero-copy">
-          <p class="eyebrow">Personal Website Framework</p>
           <h1>
-            你好，我是<br>
-            <em>[填写你的名字]</em>
+            Bridging Brand,<br>
+            Content, and<br>
+            <em>Real-World Communication</em>
           </h1>
           <p>
-            [这里填写 2 到 3 句话的个人简介。建议写你的职业方向、核心优势、正在做的事情，
-            让别人打开首页 5 秒内就知道你是谁、你擅长什么。]
+            I’m Alisa Wei, a brand and content-focused professional with strengths in strategy,
+            communication, project delivery, and audience-facing storytelling. I turn complex
+            information into clear messaging, practical plans, and collaborative execution.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#projects">查看项目</a>
-            <a class="button-ghost" href="#contact">联系我</a>
-          </div>
-          <div class="quick-grid">
-            <article class="quick-card">
-              <strong>[数字]</strong>
-              <span>[例如：工作年限 / 项目数量 / 服务客户数]</span>
-            </article>
-            <article class="quick-card">
-              <strong>[数字]</strong>
-              <span>[例如：主导项目 / 内容产出 / 合作案例]</span>
-            </article>
-            <article class="quick-card">
-              <strong>[关键词]</strong>
-              <span>[例如：跨团队协作 / 海外市场 / 品牌内容]</span>
-            </article>
+            <a class="button" href="#projects">View Projects</a>
+            <a class="button-light" href="#portfolio">View Portfolio</a>
           </div>
         </div>
-
-        <div class="hero-card">
-          <div class="photo-placeholder">
-            <div>
-              <strong>头像区域</strong>
-              <span class="placeholder">把这里替换成你的个人照片，建议尺寸接近竖版人像。</span>
-              <p class="placeholder">当前可直接把 <code>assets/lishanwei.png</code> 换成你的正式照片。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="section-head">
-          <div class="section-label">About</div>
-          <div>
-            <h2>个人介绍</h2>
-            <p>[这一部分适合写你的定位、背景、行业方向，或者一句更有个人风格的自我介绍。]</p>
-          </div>
-        </div>
-        <div class="grid-3">
-          <article class="panel">
-            <h3>职业方向</h3>
-            <p class="placeholder">[填写目标岗位 / 当前方向 / 你最想被记住的专业标签]</p>
-          </article>
-          <article class="panel">
-            <h3>核心优势</h3>
-            <p class="placeholder">[填写 2 到 3 个你最强的能力，例如内容策划、项目推进、沟通表达]</p>
-          </article>
-          <article class="panel">
-            <h3>个人风格</h3>
-            <p class="placeholder">[填写你的做事方式、价值观，或者一句更有辨识度的总结]</p>
-          </article>
+        <div class="hero-photo">
+          <img src="assets/lishanwei.png" alt="Portrait of Alisa Wei">
         </div>
       </section>
 
       <section class="section" id="experience">
-        <div class="section-head">
-          <div class="section-label">Experience</div>
-          <div>
-            <h2>经历框架</h2>
-            <p>[这里建议只保留 3 段最重要的经历，每段突出岗位、职责和结果。]</p>
-          </div>
+        <div class="section-heading-centered">
+          <h2 class="section-title">Professional Trajectory</h2>
+          <div class="section-divider" style="margin-left:auto;margin-right:auto;"></div>
         </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-meta">[时间段]</div>
-            <div class="timeline-content">
-              <h3>[公司 / 团队名称] · [岗位名称]</h3>
-              <p class="placeholder">[填写这一段经历里最重要的职责、负责内容、项目类型或业务方向。]</p>
-              <ul class="tag-list">
-                <li>[关键词 1]</li>
-                <li>[关键词 2]</li>
-                <li>[关键词 3]</li>
+        <div class="trajectory">
+          <article class="trajectory-item">
+            <div class="visual-card">
+              <div class="visual-grid">
+                <div class="mini-panel">ZAKER 超级话题与 315 专题策划</div>
+                <div class="mini-panel">PR 稿件、专题传播、活动包装</div>
+                <div class="mini-panel">平均阅读量 12 万+</div>
+              </div>
+            </div>
+            <div class="content-card">
+              <span class="date-pill">Copy &amp; PR</span>
+              <h3>文案传播与品牌表达</h3>
+              <div class="meta">Brand / Content / Communication</div>
+              <p>
+                擅长 PR 稿件、专题策划、活动传播与品牌表达，能够同时兼顾信息清晰度与传播性。
+                曾参与 ZAKER 超级话题与 315 专题策划，单条内容 3 天最高阅读及投票达到 15 万+。
+              </p>
+              <ul>
+                <li><strong>文案表达：</strong>能把复杂信息写清楚，也能写出传播性。</li>
+                <li><strong>传播策划：</strong>能围绕主题组织内容结构与传播节奏。</li>
+                <li><strong>内容包装：</strong>让品牌表达更完整、更容易被记住。</li>
+              </ul>
+              <ul class="tags">
+                <li>Copywriting</li>
+                <li>PR</li>
+                <li>Campaigns</li>
               </ul>
             </div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-meta">[时间段]</div>
-            <div class="timeline-content">
-              <h3>[公司 / 团队名称] · [岗位名称]</h3>
-              <p class="placeholder">[填写你的核心贡献、解决的问题，或者你在这一段最有代表性的成长。]</p>
-              <ul class="tag-list">
-                <li>[关键词 1]</li>
-                <li>[关键词 2]</li>
-                <li>[关键词 3]</li>
+
+          <article class="trajectory-item">
+            <div class="content-card">
+              <span class="date-pill">Strategy &amp; Growth</span>
+              <h3>策划能力与增长闭环</h3>
+              <div class="meta">Planning / SEO / Content Growth</div>
+              <p>
+                能从洞察出发提出概念、写方案，并把主题包装成可呈现、可沟通、可落地的方案。
+                同时具备从内容搭建到 SEO 关键词布局、数据追踪与复盘的增长视角。
+              </p>
+              <ul>
+                <li><strong>策划能力：</strong>参与 20+ 个项目方案，独立产出 150+ 页 PPT。</li>
+                <li><strong>创意提案：</strong>被采用的主题创意达到 3 个。</li>
+                <li><strong>增长案例：</strong>TVCMALL 官方博客搭建后实现 280% 年浏览增长。</li>
+              </ul>
+              <ul class="tags">
+                <li>Planning</li>
+                <li>SEO</li>
+                <li>PPT</li>
               </ul>
             </div>
+            <div class="visual-card">
+              <div class="visual-grid">
+                <div class="mini-panel">20+ 项目方案</div>
+                <div class="mini-panel">150+ 页 PPT 独立输出</div>
+                <div class="mini-panel">280% 年浏览增长</div>
+              </div>
+            </div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-meta">[时间段]</div>
-            <div class="timeline-content">
-              <h3>[公司 / 团队名称] · [岗位名称]</h3>
-              <p class="placeholder">[填写这一段的亮点，可以是项目成果、跨团队协作，或者代表性的成果数据。]</p>
-              <ul class="tag-list">
-                <li>[关键词 1]</li>
-                <li>[关键词 2]</li>
-                <li>[关键词 3]</li>
+
+          <article class="trajectory-item">
+            <div class="visual-card">
+              <div class="visual-grid">
+                <div class="mini-panel">客户接待与产品讲解</div>
+                <div class="mini-panel">CES 现场 50+ 有效销售线索</div>
+                <div class="mini-panel">芬兰 BD 建联 15+ 潜力客户</div>
+              </div>
+            </div>
+            <div class="content-card">
+              <span class="date-pill">Communication &amp; BD</span>
+              <h3>沟通建联与市场拓展</h3>
+              <div class="meta">Client-facing / Overseas BD / Collaboration</div>
+              <p>
+                不只是幕后内容角色，也能承担客户接待、产品演讲、国际展会沟通、直播与 TVC 出镜，
+                并具备海外 BD 拓展和多方协同能力。
+              </p>
+              <ul>
+                <li><strong>客户沟通：</strong>能在来访接待与展会现场承担讲解角色。</li>
+                <li><strong>镜头表达：</strong>参与品牌直播和 TVC 拍摄，镜头表现自然。</li>
+                <li><strong>市场拓展：</strong>在芬兰累计建联 15+ 潜力客户并维护合作关系。</li>
+              </ul>
+              <ul class="tags">
+                <li>Client Engagement</li>
+                <li>Overseas BD</li>
+                <li>Presentation</li>
               </ul>
             </div>
           </article>
@@ -654,104 +774,134 @@
       </section>
 
       <section class="section" id="projects">
-        <div class="section-head">
-          <div class="section-label">Projects</div>
-          <div>
-            <h2>项目展示</h2>
-            <p>[如果你有作品集，这里可以写项目名称、项目背景、你的角色、最终结果。]</p>
-          </div>
+        <div class="section-heading-left">
+          <h2 class="section-title">Selected Projects</h2>
+          <div class="section-divider"></div>
         </div>
-        <div class="grid-2">
-          <article class="panel">
-            <h3>[项目名称 / 案例标题]</h3>
-            <p class="placeholder">[填写项目背景：这是一个什么项目，解决什么问题。]</p>
-            <ul class="tag-list">
-              <li>[你的角色]</li>
-              <li>[项目类型]</li>
-              <li>[结果 / 成果]</li>
+        <div class="projects">
+          <article class="project-card">
+            <div class="icon-box">01</div>
+            <h3>Official Blog 0→1</h3>
+            <p>
+              从 0 到 1 搭建 TVCMALL 官方博客栏目，规划内容方向、月更机制、SEO 关键词布局与数据复盘流程，
+              形成可持续的内容增长闭环。
+            </p>
+            <ul class="tags">
+              <li>280% Growth</li>
+              <li>SEO</li>
+              <li>Content Ops</li>
             </ul>
           </article>
-          <article class="panel">
-            <h3>[项目名称 / 案例标题]</h3>
-            <p class="placeholder">[填写项目亮点：你做了什么、为什么重要、最终带来了什么价值。]</p>
-            <ul class="tag-list">
-              <li>[你的角色]</li>
-              <li>[项目类型]</li>
-              <li>[结果 / 成果]</li>
+
+          <article class="project-card">
+            <div class="icon-box">02</div>
+            <h3>Brand Proposal &amp; PPT</h3>
+            <p>
+              围绕快消、汽车、科技等客户完成品牌提案与内容包装，能够把抽象概念转化成清晰、好讲、好呈现的方案语言。
+            </p>
+            <ul class="tags">
+              <li>150+ Slides</li>
+              <li>Creative Concepts</li>
+              <li>Proposal Writing</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="icon-box">03</div>
+            <h3>Client &amp; Market Support</h3>
+            <p>
+              参与国际展会、客户接待、产品讲解与海外 BD 协同，既能做对内推进，也能完成对外建联和现场沟通。
+            </p>
+            <ul class="tags">
+              <li>CES Leads</li>
+              <li>Overseas BD</li>
+              <li>Client-facing</li>
             </ul>
           </article>
         </div>
       </section>
 
       <section class="section">
-        <div class="section-head">
-          <div class="section-label">Skills</div>
-          <div>
-            <h2>技能与补充信息</h2>
-            <p>[这部分适合放技能关键词、教育背景、语言能力、工具使用、证书等内容。]</p>
-          </div>
+        <div class="section-heading-left">
+          <h2 class="section-title">Core Competencies</h2>
+          <div class="section-divider"></div>
         </div>
-        <div class="grid-3">
-          <article class="panel">
-            <h3>专业技能</h3>
-            <ul>
-              <li class="placeholder">[技能 1]</li>
-              <li class="placeholder">[技能 2]</li>
-              <li class="placeholder">[技能 3]</li>
-            </ul>
+        <div class="competencies">
+          <article class="competency">
+            <span class="competency-mark">P</span>
+            <span>PowerPoint</span>
           </article>
-          <article class="panel">
-            <h3>教育背景</h3>
-            <ul>
-              <li class="placeholder">[学校 / 专业 / 时间]</li>
-              <li class="placeholder">[可选：交换、研究方向、奖项]</li>
-            </ul>
+          <article class="competency">
+            <span class="competency-mark">B</span>
+            <span>Brand Planning</span>
           </article>
-          <article class="panel">
-            <h3>语言 / 工具</h3>
-            <ul>
-              <li class="placeholder">[语言能力]</li>
-              <li class="placeholder">[软件 / 工具]</li>
-              <li class="placeholder">[其他加分项]</li>
-            </ul>
+          <article class="competency">
+            <span class="competency-mark">C</span>
+            <span>Client Communication</span>
+          </article>
+          <article class="competency">
+            <span class="competency-mark">S</span>
+            <span>SEO &amp; Content Growth</span>
           </article>
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <div class="section-head">
-          <div class="section-label">Contact</div>
-          <div>
-            <h2>联系方式</h2>
-            <p>[最后保留最重要的联系方式即可，尽量简洁。]</p>
-          </div>
+      <section class="section" id="portfolio">
+        <div class="section-heading-left">
+          <h2 class="section-title">Portfolio Highlights</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            这里没有直接上传整份 PPT，而是把作品集的重点内容拆成网页可读版本。
+            这样访问者打开网站就能先看到重点，不需要先下载文件。
+          </p>
         </div>
-        <div class="grid-2">
-          <article class="panel">
-            <h3>基础信息</h3>
-            <ul>
-              <li class="placeholder">姓名：[填写姓名]</li>
-              <li class="placeholder">城市：[填写城市]</li>
-              <li class="placeholder">目标方向：[填写岗位或领域]</li>
-              <li class="placeholder">一句话标签：[填写你想让人记住的身份]</li>
-            </ul>
+        <div class="portfolio-list">
+          <article class="portfolio-card">
+            <div class="portfolio-kicker">Portfolio Deck, 2026</div>
+            <h3>文案、策划、增长、沟通四条能力线并行</h3>
+            <p>
+              Alisa 的作品集并不是单一“会写文案”或“会做 PPT”的展示，而是把内容传播、品牌策划、
+              项目推进、客户沟通与海外 BD 能力整合在一起，形成完整的职业形象。
+            </p>
           </article>
-          <article class="panel">
-            <h3>联系入口</h3>
-            <ul>
-              <li class="placeholder">邮箱：[填写邮箱]</li>
-              <li class="placeholder">微信：[填写微信]</li>
-              <li class="placeholder">GitHub / LinkedIn：[填写链接]</li>
-              <li class="placeholder">作品集 / 社媒：[填写链接]</li>
-            </ul>
+          <article class="portfolio-card">
+            <div class="portfolio-kicker">Selected Metrics</div>
+            <h3>从传播结果到业务协同，都有明确成果支撑</h3>
+            <p>
+              代表性数据包括：ZAKER 话题平均阅读量 10 万+、PR 媒体回链峰值 1,500+、
+              官方博客年度浏览增长 280.8%、小红书两个月增粉 4,000+、CES 有效销售线索 50+。
+            </p>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-kicker">How To Use</div>
+            <h3>网站展示重点，完整版 PPT 可按需提供</h3>
+            <p>
+              现在网站优先承接“先了解我是谁、我做过什么、我擅长什么”，如果后面你需要，
+              可以再加一个小按钮写成“Portfolio Deck available upon request”，而不是直接公开整份文件。
+            </p>
           </article>
         </div>
       </section>
-
-      <div class="footer">
-        这是一个可直接填写的个人主页框架。后续你只需要改 <code>index.html</code> 里的占位内容和头像即可。
-      </div>
     </div>
+
+    <section class="contact-section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2>Let’s connect</h2>
+          <p>
+            我目前希望寻找品牌策划、市场营销、商务沟通或内容增长相关机会。
+            如果你正在招聘，或者想进一步了解我的完整经历与作品，欢迎联系我。
+          </p>
+          <a class="download" href="#top">Back To Top</a>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:[填写邮箱]">[填写邮箱]</a>
+          <a href="#">[填写手机号]</a>
+          <a href="#">[填写 LinkedIn]</a>
+          <a href="#">[填写小红书 / 微信 / GitHub]</a>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
