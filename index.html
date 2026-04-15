@@ -1,271 +1,134 @@
-export default function AlisaPortfolio() {
-  const strengths = [
-    {
-      title: "表达清晰",
-      desc: "把复杂信息写清楚、讲清楚，降低理解成本，让品牌信息更容易被看见、被理解、被记住。",
-    },
-    {
-      title: "推进落地",
-      desc: "不只停留在概念和文案层面，能够把方案、内容与执行串起来，推动项目真正落地。",
-    },
-    {
-      title: "协同高效",
-      desc: "能对内推动设计、销售、运营、产品等团队配合，也能对外完成接待、讲解与合作沟通。",
-    },
-  ];
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  const metrics = [
-    { value: "10万+", label: "ZAKER话题平均阅读量" },
-    { value: "20%", label: "PR 媒体品牌词搜索量" },
-    { value: "280.8%", label: "博客年度浏览增长" },
-    { value: "4,000+", label: "小红书 2个月增粉" },
-    { value: "50+", label: "CES 有效销售线索" },
-    { value: "15+", label: "芬兰 BD 潜力客户建联" },
-  ];
+<title>Lishan Wei | Portfolio</title>
+<meta name="description" content="Lishan Wei personal portfolio, brand marketing, content strategy, PR and business development.">
 
-  const sections = [
-    {
-      id: "copy-pr",
-      tag: "01 COPY & PR",
-      title: "文案传播",
-      subtitle: "能把信息写清楚，也能写出传播性。",
-      body: "参与 ZAKER 超级话题与 315 专题策划，平均阅读量 12万+，单条 3 天最高阅读及投票 15万+。擅长 PR 稿件、专题策划、活动传播、项目推进与内容增长表达。",
-      bullets: ["PR 稿件", "专题策划", "活动传播", "内容表达"],
-      accent: "from-fuchsia-200/60 via-white/60 to-cyan-100/60",
-    },
-    {
-      id: "strategy",
-      tag: "02 STRATEGY",
-      title: "策划能力",
-      subtitle: "能提概念、写方案，也能把主题真正落地。",
-      body: "参与撰写 20+ 个项目方案，独立产出 150+ 页 PPT。服务快消、汽车、科技等不同客户，能根据品牌调性调整表达。",
-      bullets: ["主题创意", "方案结构", "场景包装", "PPT 呈现"],
-      accent: "from-cyan-100/60 via-white/60 to-emerald-100/60",
-    },
-    {
-      id: "growth",
-      tag: "03 GROWTH CASE",
-      title: "内容增长案例｜官方博客 0→1",
-      subtitle: "从内容搭建到 SEO 与数据复盘，形成可持续增长闭环。",
-      body: "从 0 到 1 搭建 TVCMALL 官方博客栏目，规划行业干货、产品对比、产品动态等内容栏目，建立月均 15 篇更新机制与内容审核流程，并结合 SEO 关键词布局与数据追踪进行复盘。",
-      bullets: ["280% 年浏览增长", "922% 活跃增长", "105% 新客 ROI"],
-      accent: "from-violet-100/60 via-white/60 to-sky-100/60",
-    },
-    {
-      id: "business",
-      tag: "04 COMMUNICATION & BD",
-      title: "沟通、建联与市场拓展",
-      subtitle: "能接客户、讲产品、扛现场，也能往外跑业务。",
-      body: "有国际展会、客户接待、产品讲解、直播 / TVC 出镜与海外 BD 协同经验。外派芬兰期间累计拓展 15+ 当地潜力客户并维系客情，CES 现场获取 50+ 有效销售线索。",
-      bullets: ["客户接待与产品演讲", "直播 / TVC 出镜", "海外 BD 协同", "跨团队沟通"],
-      accent: "from-amber-100/60 via-white/60 to-rose-100/60",
-    },
-    {
-      id: "visual",
-      tag: "05 VISUAL SENSE",
-      title: "设计感与审美",
-      subtitle: "不是专业设计师，但懂品牌调性，也懂怎么让内容更好看。",
-      body: "能够独立优化符合品牌调性的项目 PPT 与传播页面，在展会展厅、活动海报、直播场景等内容中参与视觉表达把控，让内容既清晰又有呈现感。",
-      bullets: ["内容排版", "视觉呈现", "品牌调性", "页面优化"],
-      accent: "from-pink-100/60 via-white/60 to-purple-100/60",
-    },
-  ];
-
-  const gallery = [
-    { title: "项目展示图 01", note: "可替换为 PPT 页面、活动海报或品牌案例图" },
-    { title: "项目展示图 02", note: "可替换为直播画面、展会照片或作品截图" },
-    { title: "项目展示图 03", note: "可替换为博客增长截图、传播数据可视化图" },
-    { title: "项目展示图 04", note: "可替换为客户沟通场景、专题页设计图" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(194,244,239,0.9),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(226,213,255,0.85),_transparent_26%),linear-gradient(180deg,#f8fffe_0%,#f6fbff_46%,#fcfcff_100%)] text-slate-800">
-      <div className="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
-        <header className="sticky top-0 z-20 mb-8 rounded-full border border-white/60 bg-white/55 px-5 py-3 backdrop-blur-xl shadow-[0_8px_30px_rgba(120,150,170,0.12)]">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <div className="text-lg font-semibold tracking-wide">Alisa 魏丽姗</div>
-              <div className="text-sm text-slate-500">Brand / Content / Strategy / Communication</div>
-            </div>
-            <nav className="flex flex-wrap gap-3 text-sm text-slate-600">
-              <a href="#about" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">About</a>
-              <a href="#work" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">Works</a>
-              <a href="#metrics" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">Metrics</a>
-              <a href="#contact" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">Contact</a>
-            </nav>
-          </div>
-        </header>
-
-        <section id="about" className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-stretch">
-          <div className="rounded-[32px] border border-white/60 bg-white/65 p-8 shadow-[0_24px_70px_rgba(111,141,174,0.15)] backdrop-blur-2xl md:p-10">
-            <div className="mb-4 inline-flex rounded-full border border-emerald-200/70 bg-emerald-50/80 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-emerald-700">
-              Personal Portfolio
-            </div>
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-              专业、表达力与审美感并行的
-              <span className="block bg-gradient-to-r from-cyan-600 via-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
-                个人作品集主页
-              </span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-              我擅长 PR 稿件、专题策划、活动传播、项目推进与内容增长，也具备国际展会、客户接待、产品讲解、直播 / TVC 出镜与海外 BD 协同经验。这个页面以更网页化的方式，展示我在品牌、内容、策略与沟通上的综合能力。
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              {['文案表达', '策划能力', '沟通协作', '审美呈现'].map((tag) => (
-                <span key={tag} className="rounded-full border border-white/70 bg-slate-50/80 px-4 py-2 text-sm text-slate-700 shadow-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-[32px] border border-white/60 bg-white/55 p-5 shadow-[0_24px_70px_rgba(111,141,174,0.14)] backdrop-blur-2xl">
-            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[28px] bg-gradient-to-br from-white via-cyan-50 to-violet-50">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(154,230,220,0.22),transparent_24%),radial-gradient(circle_at_80%_25%,rgba(188,170,255,0.22),transparent_22%),radial-gradient(circle_at_50%_80%,rgba(255,197,227,0.18),transparent_24%)]" />
-              <div className="relative flex h-full items-center justify-center p-8">
-                <div className="w-full max-w-sm overflow-hidden rounded-[30px] border border-white/70 bg-white/70 p-4 shadow-[0_18px_60px_rgba(110,126,170,0.18)] backdrop-blur-xl">
-                  <div className="aspect-[4/5] overflow-hidden rounded-[24px] bg-slate-100">
-                    <img
-                      src="https://placehold.co/800x1000/png?text=Your+Portrait"
-                      alt="Alisa portrait placeholder"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
-                    <span>Portrait Area</span>
-                    <span>Replace with your photo</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="metrics" className="mt-8 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
-          {metrics.map((item) => (
-            <div
-              key={item.label}
-              className="rounded-[26px] border border-white/60 bg-white/60 p-5 shadow-[0_18px_44px_rgba(119,135,161,0.12)] backdrop-blur-xl"
-            >
-              <div className="text-3xl font-semibold tracking-tight text-slate-900">{item.value}</div>
-              <div className="mt-2 text-sm leading-6 text-slate-600">{item.label}</div>
-            </div>
-          ))}
-        </section>
-
-        <section className="mt-20">
-          <div className="mb-8 flex items-end justify-between gap-4">
-            <div>
-              <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Core Value</div>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">我能带来的价值</h2>
-            </div>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {strengths.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[28px] border border-white/60 bg-white/65 p-7 shadow-[0_18px_44px_rgba(119,135,161,0.12)] backdrop-blur-xl"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-100 to-violet-100 text-lg">
-                  ✦
-                </div>
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="work" className="mt-20 space-y-6">
-          <div>
-            <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Selected Work</div>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">能力模块与代表案例</h2>
-          </div>
-
-          {sections.map((item) => (
-            <article
-              key={item.id}
-              className={`grid gap-6 rounded-[30px] border border-white/60 bg-gradient-to-br ${item.accent} p-6 shadow-[0_18px_60px_rgba(120,140,170,0.14)] backdrop-blur-xl lg:grid-cols-[1.05fr_0.95fr] lg:p-8`}
-            >
-              <div className="rounded-[26px] bg-white/75 p-6 backdrop-blur-xl">
-                <div className="text-xs font-medium uppercase tracking-[0.24em] text-slate-500">{item.tag}</div>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{item.title}</h3>
-                <p className="mt-3 text-base text-slate-600">{item.subtitle}</p>
-                <p className="mt-5 text-sm leading-7 text-slate-600">{item.body}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {item.bullets.map((bullet) => (
-                    <span key={bullet} className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-sm text-slate-700">
-                      {bullet}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-[26px] border border-white/70 bg-white/55 p-4 backdrop-blur-xl">
-                <div className="flex h-full min-h-[280px] items-center justify-center rounded-[22px] border border-dashed border-slate-300/80 bg-white/65 p-6 text-center text-sm leading-7 text-slate-500">
-                  这里可以替换成你的案例截图、活动视觉、PPT 页面、传播图、博客增长截图或展会现场图。
-                  <br />
-                  <br />
-                  你只需要把图片上传到 assets 文件夹，再把图片地址替换进来即可。
-                </div>
-              </div>
-            </article>
-          ))}
-        </section>
-
-        <section className="mt-20">
-          <div>
-            <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Visual Gallery</div>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">作品展示区</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
-              这个区域适合放你的 PPT 页面截图、海报设计、活动页面、直播画面、展会照片或项目成果图。后面可以继续扩展成 6 张、8 张甚至更多。
-            </p>
-          </div>
-
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {gallery.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[26px] border border-white/60 bg-white/65 p-4 shadow-[0_18px_44px_rgba(119,135,161,0.12)] backdrop-blur-xl"
-              >
-                <div className="aspect-[4/5] overflow-hidden rounded-[20px] bg-gradient-to-br from-slate-100 to-slate-50">
-                  <img
-                    src="https://placehold.co/700x900/png?text=Add+Your+Work"
-                    alt={item.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="mt-4">
-                  <div className="font-medium text-slate-900">{item.title}</div>
-                  <div className="mt-1 text-sm leading-6 text-slate-500">{item.note}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="mt-20 rounded-[32px] border border-white/60 bg-white/65 p-8 shadow-[0_24px_70px_rgba(111,141,174,0.14)] backdrop-blur-2xl md:p-10">
-          <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
-            <div>
-              <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Contact</div>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">我期待一个展示自我的平台</h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-                适合用于求职展示、作品集投递、个人品牌主页，也适合后续继续扩展成更完整的个人网站。
-              </p>
-            </div>
-            <div className="rounded-[28px] border border-slate-200/70 bg-slate-50/70 p-6">
-              <div className="space-y-3 text-sm text-slate-600">
-                <div><span className="font-medium text-slate-900">Name:</span> Alisa 魏丽姗</div>
-                <div><span className="font-medium text-slate-900">Focus:</span> Brand / Content / Strategy / Communication</div>
-                <div><span className="font-medium text-slate-900">Email:</span> your@email.com</div>
-                <div><span className="font-medium text-slate-900">Location:</span> Finland / China</div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  );
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5fbfb;
+  color:#222;
 }
+
+.container {
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  padding:40px 0;
+}
+
+h1 {font-size:48px;}
+h2 {margin-top:60px;}
+
+img {
+  width:100%;
+  border-radius:16px;
+}
+
+.flex {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="flex">
+  <div style="flex:1;">
+    <h1>Lishan Wei</h1>
+    <p>
+      Brand Marketing / Content / Strategy / Communication  
+      展示我的文案能力、策划能力、沟通能力与项目经验。
+    </p>
+  </div>
+
+  <div style="width:250px;">
+    <img src="assets/profile.png">
+  </div>
+</div>
+
+<!-- 文案能力 -->
+<h2>Content & PR Communication</h2>
+
+<div class="flex">
+
+  <!-- 主图 -->
+  <div style="flex:1;">
+    <img src="assets/copy-main.png">
+  </div>
+
+  <!-- 右边四图 -->
+  <div style="flex:1;">
+    <div class="flex">
+      <img src="assets/copy-pr.png">
+      <img src="assets/copy-wechat.png">
+    </div>
+    <div class="flex">
+      <img src="assets/copy-weibo.png">
+      <img src="assets/copy-xhs.png">
+    </div>
+  </div>
+
+</div>
+
+<!-- 策划能力 -->
+<h2>Strategy & PPT</h2>
+
+<div class="flex">
+  <img src="assets/ppt-1.jpg" style="width:30%;">
+  <img src="assets/ppt-2.jpg" style="width:30%;">
+  <img src="assets/ppt-3.jpg" style="width:30%;">
+</div>
+
+<!-- 数据 -->
+<h2>Growth Data</h2>
+<img src="assets/blog-data.jpg">
+
+<!-- 展会 -->
+<h2>Business Development & Communication</h2>
+<img src="assets/event-1.jpg">
+
+<!-- Gallery -->
+<h2>Gallery</h2>
+
+<div class="flex">
+  <img src="assets/gallery-1.jpg" style="width:30%;">
+  <img src="assets/gallery-2.jpg" style="width:30%;">
+  <img src="assets/gallery-3.jpg" style="width:30%;">
+  <img src="assets/gallery-4.jpg" style="width:30%;">
+  <img src="assets/gallery-5.jpg" style="width:30%;">
+  <img src="assets/gallery-6.jpg" style="width:30%;">
+</div>
+
+<!-- 第二头像 -->
+<h2>About Me</h2>
+
+<div class="flex">
+  <img src="assets/profile-2.png" style="width:150px;">
+  <p>
+    Beyond work, I enjoy communication, sharing ideas and building meaningful connections.
+  </p>
+</div>
+
+</div>
+
+</body>
+</html>
