@@ -1,1106 +1,271 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alisa Wei | Personal Website</title>
-  <meta
-    name="description"
-    content="Alisa Wei personal website featuring brand strategy, content marketing, communication, selected projects, and portfolio highlights."
-  >
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Alisa Wei">
-  <link rel="canonical" href="https://lishanwei33.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Alisa Wei | Personal Website">
-  <meta
-    property="og:description"
-    content="A refined personal website for Alisa Wei featuring experience, projects, portfolio highlights, and contact information."
-  >
-  <meta property="og:url" content="https://lishanwei33.github.io/">
-  <meta property="og:image" content="https://lishanwei33.github.io/assets/lishanwei.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alisa Wei | Personal Website">
-  <meta
-    name="twitter:description"
-    content="A refined personal website for Alisa Wei featuring experience, projects, portfolio highlights, and contact information."
-  >
-  <meta name="twitter:image" content="https://lishanwei33.github.io/assets/lishanwei.png">
-  <style>
-    :root {
-      --bg: #fcfaf5;
-      --panel: #ffffff;
-      --line: rgba(12, 42, 104, 0.11);
-      --ink: #10223f;
-      --muted: #65748a;
-      --navy: #0a2a6b;
-      --blue: #4b75c1;
-      --pill: #e8f0ff;
-      --footer: #0a2764;
-      --shadow: 0 24px 54px rgba(10, 42, 107, 0.07);
-      --max-width: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(255, 242, 225, 0.65), transparent 28%),
-        linear-gradient(180deg, #fffdf9 0%, #fbf8f2 100%);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .wrap {
-      width: min(var(--max-width), calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background: rgba(255, 252, 247, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(10, 42, 107, 0.08);
-    }
-
-    .site-header .wrap {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      color: var(--navy);
-      font-size: 1.9rem;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav a {
-      padding: 10px 12px;
-      color: var(--muted);
-      font-size: 0.84rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      transition: color 0.2s ease, transform 0.2s ease;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      color: var(--navy);
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .nav .cta {
-      min-height: 46px;
-      padding: 0 22px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--footer);
-      color: #fff;
-      box-shadow: 0 12px 26px rgba(10, 39, 100, 0.12);
-    }
-
-    main {
-      padding-bottom: 0;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
-      gap: 72px;
-      align-items: center;
-      min-height: calc(100vh - 90px);
-      padding: 70px 0 78px;
-    }
-
-    .hero-copy,
-    .hero-photo,
-    .section {
-      animation: rise-in 0.8s ease both;
-    }
-
-    .hero h1 {
-      margin: 0;
-      color: var(--navy);
-      font-size: clamp(4rem, 8.5vw, 7rem);
-      line-height: 0.9;
-      letter-spacing: -0.09em;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--blue);
-      font-weight: 700;
-    }
-
-    .hero-copy p {
-      max-width: 560px;
-      margin: 28px 0 0;
-      color: var(--muted);
-      font-size: 1.15rem;
-      line-height: 1.8;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .button,
-    .button-light {
-      min-height: 54px;
-      padding: 0 22px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.88rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .button {
-      background: var(--footer);
-      color: #fff;
-      box-shadow: 0 14px 28px rgba(10, 39, 100, 0.14);
-    }
-
-    .button-light {
-      color: var(--navy);
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.75);
-    }
-
-    .button:hover,
-    .button-light:hover,
-    .button:focus-visible,
-    .button-light:focus-visible {
-      transform: translateY(-2px);
-      outline: none;
-    }
-
-    .hero-photo img {
-      width: 100%;
-      aspect-ratio: 0.88 / 1;
-      object-fit: cover;
-      filter: grayscale(1);
-      background: #efebe4;
-      box-shadow: var(--shadow);
-    }
-
-    .section {
-      padding: 92px 0 0;
-    }
-
-    .section-title {
-      color: var(--navy);
-      font-size: clamp(2.3rem, 4vw, 3.4rem);
-      line-height: 1;
-      letter-spacing: -0.06em;
-      margin: 0;
-    }
-
-    .section-intro {
-      margin: 18px 0 0;
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 780px;
-    }
-
-    .section-divider {
-      width: 60px;
-      height: 2px;
-      background: rgba(75, 117, 193, 0.32);
-      margin-top: 18px;
-    }
-
-    .section-heading-centered {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .section-heading-left {
-      margin-bottom: 42px;
-    }
-
-    .trajectory {
-      position: relative;
-      display: grid;
-      gap: 46px;
-    }
-
-    .trajectory::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      transform: translateX(-50%);
-      background: linear-gradient(180deg, rgba(75, 117, 193, 0.9), rgba(248, 120, 67, 0.7));
-    }
-
-    .trajectory-item {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .trajectory-item::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 12px;
-      height: 12px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: #4c76c2;
-      box-shadow: 0 0 0 6px rgba(76, 118, 194, 0.12);
-    }
-
-    .visual-card,
-    .content-card,
-    .project-card,
-    .portfolio-card,
-    .competency {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .visual-card {
-      min-height: 280px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 14px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 244, 237, 0.92));
-    }
-
-    .visual-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .mini-panel {
-      min-height: 108px;
-      padding: 14px;
-      background: rgba(238, 244, 255, 0.56);
-      border: 1px solid rgba(75, 117, 193, 0.16);
-      display: flex;
-      align-items: end;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.45;
-    }
-
-    .content-card {
-      padding: 12px 0;
-      box-shadow: none;
-      border: 0;
-      background: transparent;
-    }
-
-    .date-pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 30px;
-      padding: 0 12px;
-      border-radius: 999px;
-      background: var(--pill);
-      color: var(--blue);
-      font-size: 0.77rem;
-      font-weight: 800;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    .content-card h3 {
-      margin: 18px 0 8px;
-      color: var(--navy);
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      letter-spacing: -0.05em;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.96rem;
-      margin-bottom: 16px;
-    }
-
-    .content-card p,
-    .content-card li,
-    .project-card p,
-    .portfolio-card p,
-    .contact-copy p {
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .content-card ul {
-      margin: 0;
-      padding-left: 20px;
-      display: grid;
-      gap: 10px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .tags li {
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: var(--pill);
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .project-card {
-      padding: 28px;
-      min-height: 300px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .icon-box {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 28px;
-      color: var(--blue);
-      background: rgba(75, 117, 193, 0.1);
-      font-weight: 800;
-    }
-
-    .project-card h3 {
-      margin: 0 0 14px;
-      color: var(--navy);
-      font-size: 1.4rem;
-      letter-spacing: -0.04em;
-    }
-
-    .project-card .tags {
-      margin-top: auto;
-      padding-top: 18px;
-    }
-
-    .competencies {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .competency {
-      min-height: 86px;
-      padding: 0 22px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      color: var(--navy);
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .competency-mark {
-      width: 30px;
-      height: 30px;
-      display: grid;
-      place-items: center;
-      color: var(--blue);
-      font-size: 0.95rem;
-      font-weight: 900;
-      background: rgba(75, 117, 193, 0.12);
-    }
-
-    .portfolio-list {
-      display: grid;
-      gap: 26px;
-    }
-
-    .portfolio-card {
-      padding: 28px 0;
-      box-shadow: none;
-      border-left: 0;
-      border-right: 0;
-      border-top: 0;
-      background: transparent;
-    }
-
-    .portfolio-card:first-child {
-      padding-top: 0;
-    }
-
-    .portfolio-kicker {
-      color: var(--blue);
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .portfolio-card h3 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      letter-spacing: -0.04em;
-    }
-
-    .contact-section {
-      margin-top: 96px;
-      background: var(--footer);
-      color: #fff;
-    }
-
-    .slides-viewer {
-      margin-top: 34px;
-    }
-
-    .slides-stage {
-      padding: 18px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .slides-viewport {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .slide-item {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.28s ease;
-    }
-
-    .slide-item.is-active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .slide-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background: #fff;
-    }
-
-    .slides-toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-
-    .slides-meta {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
-
-    .slides-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .slides-counter {
-      min-width: 84px;
-      text-align: center;
-      color: var(--navy);
-      font-size: 0.88rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .slide-button {
-      width: 48px;
-      height: 48px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--navy);
-      font-size: 1.3rem;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .slide-button:hover,
-    .slide-button:focus-visible {
-      transform: translateY(-1px);
-      background: rgba(75, 117, 193, 0.06);
-      outline: none;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 44px;
-      padding: 84px 0 92px;
-    }
-
-    .contact-copy h2 {
-      margin: 0 0 24px;
-      font-size: clamp(3rem, 5vw, 4.8rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-    }
-
-    .contact-copy p,
-    .contact-links a {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 14px;
-      align-content: start;
-      padding-top: 24px;
-    }
-
-    .contact-links a {
-      font-size: 1.02rem;
-    }
-
-    .download {
-      margin-top: 28px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
-      background: #fff;
-      color: var(--footer);
-      font-size: 0.88rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    @keyframes rise-in {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 980px) {
-      .hero,
-      .trajectory-item,
-      .projects,
-      .competencies,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-        gap: 32px;
-      }
-
-      .trajectory::before,
-      .trajectory-item::before {
-        display: none;
-      }
-
-      .trajectory-item {
-        gap: 18px;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .wrap {
-        width: min(var(--max-width), calc(100% - 20px));
-      }
-
-      .site-header .wrap {
-        padding: 10px 0;
-      }
-
-      .brand {
-        font-size: 1.6rem;
-      }
-
-      .hero {
-        padding: 42px 0 44px;
-      }
-
-      .hero h1 {
-        font-size: clamp(3.2rem, 17vw, 4.9rem);
-      }
-
-      .hero-copy p {
-        font-size: 1rem;
-      }
-
-      .section {
-        padding-top: 68px;
-      }
-
-      .visual-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-  <script type="application/ld+json">
+export default function AlisaPortfolio() {
+  const strengths = [
     {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "dateModified": "2026-04-15",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Alisa Wei",
-        "alternateName": "魏丽姗",
-        "url": "https://lishanwei33.github.io/",
-        "image": "https://lishanwei33.github.io/assets/lishanwei.png",
-        "description": "Brand strategy, content marketing, and communication portfolio for Alisa Wei."
-      }
-    }
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="#top">AlisaWei</a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#slides">Slides</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="#contact">Let's Talk</a>
-      </nav>
-    </div>
-  </header>
+      title: "表达清晰",
+      desc: "把复杂信息写清楚、讲清楚，降低理解成本，让品牌信息更容易被看见、被理解、被记住。",
+    },
+    {
+      title: "推进落地",
+      desc: "不只停留在概念和文案层面，能够把方案、内容与执行串起来，推动项目真正落地。",
+    },
+    {
+      title: "协同高效",
+      desc: "能对内推动设计、销售、运营、产品等团队配合，也能对外完成接待、讲解与合作沟通。",
+    },
+  ];
 
-  <main id="top">
-    <div class="wrap">
-      <section class="hero" aria-label="Hero">
-        <div class="hero-copy">
-          <h1>
-            Bridging Brand,<br>
-            Content, and<br>
-            <em>Real-World Communication</em>
-          </h1>
-          <p>
-            I’m Alisa Wei, a brand and content-focused professional with strengths in strategy,
-            communication, project delivery, and audience-facing storytelling. I turn complex
-            information into clear messaging, practical plans, and collaborative execution.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="#projects">View Projects</a>
-            <a class="button-light" href="#portfolio">View Portfolio</a>
+  const metrics = [
+    { value: "10万+", label: "ZAKER话题平均阅读量" },
+    { value: "20%", label: "PR 媒体品牌词搜索量" },
+    { value: "280.8%", label: "博客年度浏览增长" },
+    { value: "4,000+", label: "小红书 2个月增粉" },
+    { value: "50+", label: "CES 有效销售线索" },
+    { value: "15+", label: "芬兰 BD 潜力客户建联" },
+  ];
+
+  const sections = [
+    {
+      id: "copy-pr",
+      tag: "01 COPY & PR",
+      title: "文案传播",
+      subtitle: "能把信息写清楚，也能写出传播性。",
+      body: "参与 ZAKER 超级话题与 315 专题策划，平均阅读量 12万+，单条 3 天最高阅读及投票 15万+。擅长 PR 稿件、专题策划、活动传播、项目推进与内容增长表达。",
+      bullets: ["PR 稿件", "专题策划", "活动传播", "内容表达"],
+      accent: "from-fuchsia-200/60 via-white/60 to-cyan-100/60",
+    },
+    {
+      id: "strategy",
+      tag: "02 STRATEGY",
+      title: "策划能力",
+      subtitle: "能提概念、写方案，也能把主题真正落地。",
+      body: "参与撰写 20+ 个项目方案，独立产出 150+ 页 PPT。服务快消、汽车、科技等不同客户，能根据品牌调性调整表达。",
+      bullets: ["主题创意", "方案结构", "场景包装", "PPT 呈现"],
+      accent: "from-cyan-100/60 via-white/60 to-emerald-100/60",
+    },
+    {
+      id: "growth",
+      tag: "03 GROWTH CASE",
+      title: "内容增长案例｜官方博客 0→1",
+      subtitle: "从内容搭建到 SEO 与数据复盘，形成可持续增长闭环。",
+      body: "从 0 到 1 搭建 TVCMALL 官方博客栏目，规划行业干货、产品对比、产品动态等内容栏目，建立月均 15 篇更新机制与内容审核流程，并结合 SEO 关键词布局与数据追踪进行复盘。",
+      bullets: ["280% 年浏览增长", "922% 活跃增长", "105% 新客 ROI"],
+      accent: "from-violet-100/60 via-white/60 to-sky-100/60",
+    },
+    {
+      id: "business",
+      tag: "04 COMMUNICATION & BD",
+      title: "沟通、建联与市场拓展",
+      subtitle: "能接客户、讲产品、扛现场，也能往外跑业务。",
+      body: "有国际展会、客户接待、产品讲解、直播 / TVC 出镜与海外 BD 协同经验。外派芬兰期间累计拓展 15+ 当地潜力客户并维系客情，CES 现场获取 50+ 有效销售线索。",
+      bullets: ["客户接待与产品演讲", "直播 / TVC 出镜", "海外 BD 协同", "跨团队沟通"],
+      accent: "from-amber-100/60 via-white/60 to-rose-100/60",
+    },
+    {
+      id: "visual",
+      tag: "05 VISUAL SENSE",
+      title: "设计感与审美",
+      subtitle: "不是专业设计师，但懂品牌调性，也懂怎么让内容更好看。",
+      body: "能够独立优化符合品牌调性的项目 PPT 与传播页面，在展会展厅、活动海报、直播场景等内容中参与视觉表达把控，让内容既清晰又有呈现感。",
+      bullets: ["内容排版", "视觉呈现", "品牌调性", "页面优化"],
+      accent: "from-pink-100/60 via-white/60 to-purple-100/60",
+    },
+  ];
+
+  const gallery = [
+    { title: "项目展示图 01", note: "可替换为 PPT 页面、活动海报或品牌案例图" },
+    { title: "项目展示图 02", note: "可替换为直播画面、展会照片或作品截图" },
+    { title: "项目展示图 03", note: "可替换为博客增长截图、传播数据可视化图" },
+    { title: "项目展示图 04", note: "可替换为客户沟通场景、专题页设计图" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(194,244,239,0.9),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(226,213,255,0.85),_transparent_26%),linear-gradient(180deg,#f8fffe_0%,#f6fbff_46%,#fcfcff_100%)] text-slate-800">
+      <div className="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
+        <header className="sticky top-0 z-20 mb-8 rounded-full border border-white/60 bg-white/55 px-5 py-3 backdrop-blur-xl shadow-[0_8px_30px_rgba(120,150,170,0.12)]">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <div className="text-lg font-semibold tracking-wide">Alisa 魏丽姗</div>
+              <div className="text-sm text-slate-500">Brand / Content / Strategy / Communication</div>
+            </div>
+            <nav className="flex flex-wrap gap-3 text-sm text-slate-600">
+              <a href="#about" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">About</a>
+              <a href="#work" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">Works</a>
+              <a href="#metrics" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">Metrics</a>
+              <a href="#contact" className="rounded-full px-3 py-1.5 hover:bg-slate-900/5">Contact</a>
+            </nav>
           </div>
-        </div>
-        <div class="hero-photo">
-          <img src="assets/lishanwei.png" alt="Portrait of Alisa Wei">
-        </div>
-      </section>
+        </header>
 
-      <section class="section" id="experience">
-        <div class="section-heading-centered">
-          <h2 class="section-title">Professional Trajectory</h2>
-          <div class="section-divider" style="margin-left:auto;margin-right:auto;"></div>
-        </div>
-        <div class="trajectory">
-          <article class="trajectory-item">
-            <div class="visual-card">
-              <div class="visual-grid">
-                <div class="mini-panel">ZAKER 超级话题与 315 专题策划</div>
-                <div class="mini-panel">PR 稿件、专题传播、活动包装</div>
-                <div class="mini-panel">平均阅读量 12 万+</div>
-              </div>
+        <section id="about" className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-stretch">
+          <div className="rounded-[32px] border border-white/60 bg-white/65 p-8 shadow-[0_24px_70px_rgba(111,141,174,0.15)] backdrop-blur-2xl md:p-10">
+            <div className="mb-4 inline-flex rounded-full border border-emerald-200/70 bg-emerald-50/80 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-emerald-700">
+              Personal Portfolio
             </div>
-            <div class="content-card">
-              <span class="date-pill">Copy &amp; PR</span>
-              <h3>文案传播与品牌表达</h3>
-              <div class="meta">Brand / Content / Communication</div>
-              <p>
-                擅长 PR 稿件、专题策划、活动传播与品牌表达，能够同时兼顾信息清晰度与传播性。
-                曾参与 ZAKER 超级话题与 315 专题策划，单条内容 3 天最高阅读及投票达到 15 万+。
-              </p>
-              <ul>
-                <li><strong>文案表达：</strong>能把复杂信息写清楚，也能写出传播性。</li>
-                <li><strong>传播策划：</strong>能围绕主题组织内容结构与传播节奏。</li>
-                <li><strong>内容包装：</strong>让品牌表达更完整、更容易被记住。</li>
-              </ul>
-              <ul class="tags">
-                <li>Copywriting</li>
-                <li>PR</li>
-                <li>Campaigns</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="trajectory-item">
-            <div class="content-card">
-              <span class="date-pill">Strategy &amp; Growth</span>
-              <h3>策划能力与增长闭环</h3>
-              <div class="meta">Planning / SEO / Content Growth</div>
-              <p>
-                能从洞察出发提出概念、写方案，并把主题包装成可呈现、可沟通、可落地的方案。
-                同时具备从内容搭建到 SEO 关键词布局、数据追踪与复盘的增长视角。
-              </p>
-              <ul>
-                <li><strong>策划能力：</strong>参与 20+ 个项目方案，独立产出 150+ 页 PPT。</li>
-                <li><strong>创意提案：</strong>被采用的主题创意达到 3 个。</li>
-                <li><strong>增长案例：</strong>TVCMALL 官方博客搭建后实现 280% 年浏览增长。</li>
-              </ul>
-              <ul class="tags">
-                <li>Planning</li>
-                <li>SEO</li>
-                <li>PPT</li>
-              </ul>
-            </div>
-            <div class="visual-card">
-              <div class="visual-grid">
-                <div class="mini-panel">20+ 项目方案</div>
-                <div class="mini-panel">150+ 页 PPT 独立输出</div>
-                <div class="mini-panel">280% 年浏览增长</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="trajectory-item">
-            <div class="visual-card">
-              <div class="visual-grid">
-                <div class="mini-panel">客户接待与产品讲解</div>
-                <div class="mini-panel">CES 现场 50+ 有效销售线索</div>
-                <div class="mini-panel">芬兰 BD 建联 15+ 潜力客户</div>
-              </div>
-            </div>
-            <div class="content-card">
-              <span class="date-pill">Communication &amp; BD</span>
-              <h3>沟通建联与市场拓展</h3>
-              <div class="meta">Client-facing / Overseas BD / Collaboration</div>
-              <p>
-                不只是幕后内容角色，也能承担客户接待、产品演讲、国际展会沟通、直播与 TVC 出镜，
-                并具备海外 BD 拓展和多方协同能力。
-              </p>
-              <ul>
-                <li><strong>客户沟通：</strong>能在来访接待与展会现场承担讲解角色。</li>
-                <li><strong>镜头表达：</strong>参与品牌直播和 TVC 拍摄，镜头表现自然。</li>
-                <li><strong>市场拓展：</strong>在芬兰累计建联 15+ 潜力客户并维护合作关系。</li>
-              </ul>
-              <ul class="tags">
-                <li>Client Engagement</li>
-                <li>Overseas BD</li>
-                <li>Presentation</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="section-heading-left">
-          <h2 class="section-title">Selected Projects</h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="projects">
-          <article class="project-card">
-            <div class="icon-box">01</div>
-            <h3>Official Blog 0→1</h3>
-            <p>
-              从 0 到 1 搭建 TVCMALL 官方博客栏目，规划内容方向、月更机制、SEO 关键词布局与数据复盘流程，
-              形成可持续的内容增长闭环。
+            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
+              专业、表达力与审美感并行的
+              <span className="block bg-gradient-to-r from-cyan-600 via-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
+                个人作品集主页
+              </span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
+              我擅长 PR 稿件、专题策划、活动传播、项目推进与内容增长，也具备国际展会、客户接待、产品讲解、直播 / TVC 出镜与海外 BD 协同经验。这个页面以更网页化的方式，展示我在品牌、内容、策略与沟通上的综合能力。
             </p>
-            <ul class="tags">
-              <li>280% Growth</li>
-              <li>SEO</li>
-              <li>Content Ops</li>
-            </ul>
-          </article>
 
-          <article class="project-card">
-            <div class="icon-box">02</div>
-            <h3>Brand Proposal &amp; PPT</h3>
-            <p>
-              围绕快消、汽车、科技等客户完成品牌提案与内容包装，能够把抽象概念转化成清晰、好讲、好呈现的方案语言。
-            </p>
-            <ul class="tags">
-              <li>150+ Slides</li>
-              <li>Creative Concepts</li>
-              <li>Proposal Writing</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="icon-box">03</div>
-            <h3>Client &amp; Market Support</h3>
-            <p>
-              参与国际展会、客户接待、产品讲解与海外 BD 协同，既能做对内推进，也能完成对外建联和现场沟通。
-            </p>
-            <ul class="tags">
-              <li>CES Leads</li>
-              <li>Overseas BD</li>
-              <li>Client-facing</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading-left">
-          <h2 class="section-title">Core Competencies</h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="competencies">
-          <article class="competency">
-            <span class="competency-mark">P</span>
-            <span>PowerPoint</span>
-          </article>
-          <article class="competency">
-            <span class="competency-mark">B</span>
-            <span>Brand Planning</span>
-          </article>
-          <article class="competency">
-            <span class="competency-mark">C</span>
-            <span>Client Communication</span>
-          </article>
-          <article class="competency">
-            <span class="competency-mark">S</span>
-            <span>SEO &amp; Content Growth</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="portfolio">
-        <div class="section-heading-left">
-          <h2 class="section-title">Portfolio Highlights</h2>
-          <div class="section-divider"></div>
-          <p class="section-intro">
-            这里没有直接上传整份 PPT，而是把作品集的重点内容拆成网页可读版本。
-            这样访问者打开网站就能先看到重点，不需要先下载文件。
-          </p>
-        </div>
-        <div class="portfolio-list">
-          <article class="portfolio-card">
-            <div class="portfolio-kicker">Portfolio Deck, 2026</div>
-            <h3>文案、策划、增长、沟通四条能力线并行</h3>
-            <p>
-              Alisa 的作品集并不是单一“会写文案”或“会做 PPT”的展示，而是把内容传播、品牌策划、
-              项目推进、客户沟通与海外 BD 能力整合在一起，形成完整的职业形象。
-            </p>
-          </article>
-          <article class="portfolio-card">
-            <div class="portfolio-kicker">Selected Metrics</div>
-            <h3>从传播结果到业务协同，都有明确成果支撑</h3>
-            <p>
-              代表性数据包括：ZAKER 话题平均阅读量 10 万+、PR 媒体回链峰值 1,500+、
-              官方博客年度浏览增长 280.8%、小红书两个月增粉 4,000+、CES 有效销售线索 50+。
-            </p>
-          </article>
-          <article class="portfolio-card">
-            <div class="portfolio-kicker">How To Use</div>
-            <h3>网站展示重点，完整版 PPT 可按需提供</h3>
-            <p>
-              现在网站优先承接“先了解我是谁、我做过什么、我擅长什么”，如果后面你需要，
-              可以再加一个小按钮写成“Portfolio Deck available upon request”，而不是直接公开整份文件。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="slides">
-        <div class="section-heading-left">
-          <h2 class="section-title">Portfolio Slides</h2>
-          <div class="section-divider"></div>
-          <p class="section-intro">
-            这里已经把 PPT 每一页转成图片并嵌入网页。现在访问者可以直接在网站里向下滚动，
-            一页一页查看完整作品集，不需要下载或打开原始 PPT 文件。
-          </p>
-        </div>
-        <div class="slides-viewer">
-          <div class="slides-stage">
-            <div class="slides-viewport" id="slidesViewport" aria-live="polite">
-              <article class="slide-item is-active" data-caption="封面页：Alisa 魏丽姗作品集与求职方向概览。">
-                <img src="assets/slides/slide-01.png" alt="Portfolio slide 1">
-              </article>
-              <article class="slide-item" data-caption="个人背景、教育经历、核心能力与可带来的价值。">
-                <img src="assets/slides/slide-02.png" alt="Portfolio slide 2">
-              </article>
-              <article class="slide-item" data-caption="Copy &amp; PR 能力展示与传播案例。">
-                <img src="assets/slides/slide-03.png" alt="Portfolio slide 3">
-              </article>
-              <article class="slide-item" data-caption="传播与文案方向的补充展示页面。">
-                <img src="assets/slides/slide-04.png" alt="Portfolio slide 4">
-              </article>
-              <article class="slide-item" data-caption="PR 与内容传播成果延展。">
-                <img src="assets/slides/slide-05.png" alt="Portfolio slide 5">
-              </article>
-              <article class="slide-item" data-caption="策划力与提案能力介绍。">
-                <img src="assets/slides/slide-06.png" alt="Portfolio slide 6">
-              </article>
-              <article class="slide-item" data-caption="策划能力分隔页。">
-                <img src="assets/slides/slide-07.png" alt="Portfolio slide 7">
-              </article>
-              <article class="slide-item" data-caption="策划数据成果与项目提案输出情况。">
-                <img src="assets/slides/slide-08.png" alt="Portfolio slide 8">
-              </article>
-              <article class="slide-item" data-caption="内容增长案例：官方博客 0→1。">
-                <img src="assets/slides/slide-09.png" alt="Portfolio slide 9">
-              </article>
-              <article class="slide-item" data-caption="沟通、建联与市场拓展案例。">
-                <img src="assets/slides/slide-10.png" alt="Portfolio slide 10">
-              </article>
-              <article class="slide-item" data-caption="客户与市场协同相关展示页。">
-                <img src="assets/slides/slide-11.png" alt="Portfolio slide 11">
-              </article>
-              <article class="slide-item" data-caption="资源与审美相关能力补充。">
-                <img src="assets/slides/slide-12.png" alt="Portfolio slide 12">
-              </article>
-              <article class="slide-item" data-caption="设计感与审美表达展示。">
-                <img src="assets/slides/slide-13.png" alt="Portfolio slide 13">
-              </article>
-              <article class="slide-item" data-caption="结尾页：展示自我平台与结束页。">
-                <img src="assets/slides/slide-14.png" alt="Portfolio slide 14">
-              </article>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {['文案表达', '策划能力', '沟通协作', '审美呈现'].map((tag) => (
+                <span key={tag} className="rounded-full border border-white/70 bg-slate-50/80 px-4 py-2 text-sm text-slate-700 shadow-sm">
+                  {tag}
+                </span>
+              ))}
             </div>
-            <div class="slides-toolbar">
-              <div class="slides-meta" id="slidesCaption">封面页：Alisa 魏丽姗作品集与求职方向概览。</div>
-              <div class="slides-controls">
-                <button class="slide-button" id="prevSlide" type="button" aria-label="上一页">&#8592;</button>
-                <div class="slides-counter" id="slidesCounter">01 / 14</div>
-                <button class="slide-button" id="nextSlide" type="button" aria-label="下一页">&#8594;</button>
+          </div>
+
+          <div className="rounded-[32px] border border-white/60 bg-white/55 p-5 shadow-[0_24px_70px_rgba(111,141,174,0.14)] backdrop-blur-2xl">
+            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[28px] bg-gradient-to-br from-white via-cyan-50 to-violet-50">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(154,230,220,0.22),transparent_24%),radial-gradient(circle_at_80%_25%,rgba(188,170,255,0.22),transparent_22%),radial-gradient(circle_at_50%_80%,rgba(255,197,227,0.18),transparent_24%)]" />
+              <div className="relative flex h-full items-center justify-center p-8">
+                <div className="w-full max-w-sm overflow-hidden rounded-[30px] border border-white/70 bg-white/70 p-4 shadow-[0_18px_60px_rgba(110,126,170,0.18)] backdrop-blur-xl">
+                  <div className="aspect-[4/5] overflow-hidden rounded-[24px] bg-slate-100">
+                    <img
+                      src="https://placehold.co/800x1000/png?text=Your+Portrait"
+                      alt="Alisa portrait placeholder"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
+                    <span>Portrait Area</span>
+                    <span>Replace with your photo</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
 
-    <section class="contact-section" id="contact">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
-          <h2>Let’s connect</h2>
-          <p>
-            我目前希望寻找品牌策划、市场营销、商务沟通或内容增长相关机会。
-            如果你正在招聘，或者想进一步了解我的完整经历与作品，欢迎联系我。
-          </p>
-          <a class="download" href="#top">Back To Top</a>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:[填写邮箱]">[填写邮箱]</a>
-          <a href="#">[填写手机号]</a>
-          <a href="#">[填写 LinkedIn]</a>
-          <a href="#">[填写小红书 / 微信 / GitHub]</a>
-        </div>
+        <section id="metrics" className="mt-8 grid gap-4 md:grid-cols-3 xl:grid-cols-6">
+          {metrics.map((item) => (
+            <div
+              key={item.label}
+              className="rounded-[26px] border border-white/60 bg-white/60 p-5 shadow-[0_18px_44px_rgba(119,135,161,0.12)] backdrop-blur-xl"
+            >
+              <div className="text-3xl font-semibold tracking-tight text-slate-900">{item.value}</div>
+              <div className="mt-2 text-sm leading-6 text-slate-600">{item.label}</div>
+            </div>
+          ))}
+        </section>
+
+        <section className="mt-20">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Core Value</div>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">我能带来的价值</h2>
+            </div>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {strengths.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[28px] border border-white/60 bg-white/65 p-7 shadow-[0_18px_44px_rgba(119,135,161,0.12)] backdrop-blur-xl"
+              >
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-100 to-violet-100 text-lg">
+                  ✦
+                </div>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="work" className="mt-20 space-y-6">
+          <div>
+            <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Selected Work</div>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">能力模块与代表案例</h2>
+          </div>
+
+          {sections.map((item) => (
+            <article
+              key={item.id}
+              className={`grid gap-6 rounded-[30px] border border-white/60 bg-gradient-to-br ${item.accent} p-6 shadow-[0_18px_60px_rgba(120,140,170,0.14)] backdrop-blur-xl lg:grid-cols-[1.05fr_0.95fr] lg:p-8`}
+            >
+              <div className="rounded-[26px] bg-white/75 p-6 backdrop-blur-xl">
+                <div className="text-xs font-medium uppercase tracking-[0.24em] text-slate-500">{item.tag}</div>
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{item.title}</h3>
+                <p className="mt-3 text-base text-slate-600">{item.subtitle}</p>
+                <p className="mt-5 text-sm leading-7 text-slate-600">{item.body}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {item.bullets.map((bullet) => (
+                    <span key={bullet} className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-sm text-slate-700">
+                      {bullet}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-[26px] border border-white/70 bg-white/55 p-4 backdrop-blur-xl">
+                <div className="flex h-full min-h-[280px] items-center justify-center rounded-[22px] border border-dashed border-slate-300/80 bg-white/65 p-6 text-center text-sm leading-7 text-slate-500">
+                  这里可以替换成你的案例截图、活动视觉、PPT 页面、传播图、博客增长截图或展会现场图。
+                  <br />
+                  <br />
+                  你只需要把图片上传到 assets 文件夹，再把图片地址替换进来即可。
+                </div>
+              </div>
+            </article>
+          ))}
+        </section>
+
+        <section className="mt-20">
+          <div>
+            <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Visual Gallery</div>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">作品展示区</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
+              这个区域适合放你的 PPT 页面截图、海报设计、活动页面、直播画面、展会照片或项目成果图。后面可以继续扩展成 6 张、8 张甚至更多。
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            {gallery.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[26px] border border-white/60 bg-white/65 p-4 shadow-[0_18px_44px_rgba(119,135,161,0.12)] backdrop-blur-xl"
+              >
+                <div className="aspect-[4/5] overflow-hidden rounded-[20px] bg-gradient-to-br from-slate-100 to-slate-50">
+                  <img
+                    src="https://placehold.co/700x900/png?text=Add+Your+Work"
+                    alt={item.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="mt-4">
+                  <div className="font-medium text-slate-900">{item.title}</div>
+                  <div className="mt-1 text-sm leading-6 text-slate-500">{item.note}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="contact" className="mt-20 rounded-[32px] border border-white/60 bg-white/65 p-8 shadow-[0_24px_70px_rgba(111,141,174,0.14)] backdrop-blur-2xl md:p-10">
+          <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div>
+              <div className="text-sm uppercase tracking-[0.22em] text-slate-500">Contact</div>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">我期待一个展示自我的平台</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+                适合用于求职展示、作品集投递、个人品牌主页，也适合后续继续扩展成更完整的个人网站。
+              </p>
+            </div>
+            <div className="rounded-[28px] border border-slate-200/70 bg-slate-50/70 p-6">
+              <div className="space-y-3 text-sm text-slate-600">
+                <div><span className="font-medium text-slate-900">Name:</span> Alisa 魏丽姗</div>
+                <div><span className="font-medium text-slate-900">Focus:</span> Brand / Content / Strategy / Communication</div>
+                <div><span className="font-medium text-slate-900">Email:</span> your@email.com</div>
+                <div><span className="font-medium text-slate-900">Location:</span> Finland / China</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-  </main>
-  <script>
-    (function () {
-      const slides = Array.from(document.querySelectorAll('.slide-item'));
-      const prevButton = document.getElementById('prevSlide');
-      const nextButton = document.getElementById('nextSlide');
-      const counter = document.getElementById('slidesCounter');
-      const caption = document.getElementById('slidesCaption');
-
-      if (!slides.length || !prevButton || !nextButton || !counter || !caption) {
-        return;
-      }
-
-      let current = 0;
-
-      function render(index) {
-        current = (index + slides.length) % slides.length;
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('is-active', i === current);
-        });
-        counter.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
-        caption.textContent = slides[current].dataset.caption || '';
-      }
-
-      prevButton.addEventListener('click', function () {
-        render(current - 1);
-      });
-
-      nextButton.addEventListener('click', function () {
-        render(current + 1);
-      });
-
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowLeft') {
-          render(current - 1);
-        } else if (event.key === 'ArrowRight') {
-          render(current + 1);
-        }
-      });
-
-      render(0);
-    }());
-  </script>
-</body>
-</html>
+    </div>
+  );
+}
